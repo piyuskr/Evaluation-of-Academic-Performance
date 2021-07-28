@@ -1,0 +1,50 @@
+<%- include("partials/header") -%>
+    <div class="container">
+        <div class="title">Add Basic Information of User</div>
+        <div class="content">
+            <form action="/marksheet" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" name="fullName" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Roll_No</span>
+                        <input type="text" placeholder="Enter your roll_No" name="rollNo" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Uni Roll_No</span>
+                        <input type="text" placeholder="Enter your uni_No" name="uniNo" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Batch</span>
+                        <input type="text" placeholder="Enter your batch" name="batch" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Branch</span>
+                        <input type="text" placeholder="Enter your branch" name="branch" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Github ID</span>
+                        <input type="text" placeholder="Enter your branch" name="github" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">LinkedIn ID</span>
+                        <input type="text" placeholder="Enter your branch" name="linkedIn" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Degree</label>
+                        <select id="inputState" class="form-control" name="degree">
+                          <option selected>Select</option>
+                          <option name="degree">B.tech</option>
+                          <option name="degree">Diploma</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+    <%- include("partials/footer") %>

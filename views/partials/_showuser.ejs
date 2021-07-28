@@ -1,0 +1,20 @@
+<% for(const i=0; i < users.length ;i++){ %>
+
+    <tr>
+        <td>
+            <%= i+1 %>
+        </td>
+        <td>
+            <%= users[i].email %>
+        </td>
+        <td>
+            <%= users[i].isAdmin %>
+        </td>
+        <td>
+            <a href="updateUser" class="btn border-shadow update">
+                <span><i class="fas fa-pencil-alt"></i></span>
+            </a>
+        </td>
+
+    </tr>
+    <% } %>

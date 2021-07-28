@@ -1,0 +1,327 @@
+<%- include("partials/header")%>
+    <div class="container">
+        <div class="title">Studentmarksheet-Theory</div>
+        <div class="content">
+            <form action="/updatemarks" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Roll_No</span>
+                        <input type="text" placeholder="" name="rollNo">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Semmester Name</label>
+                        <select id="inputState" class="form-control" name="semName">
+                          <option selected>Select</option>
+                          <option name="semName">Semmester 1</option>
+                          <option name="semName">Semmester 2</option>
+                          <option name="semName">Semmester 3</option>
+                          <option name="semName">Semmester 4</option>
+                          <option name="semName">Semmester 5</option>
+                          <option name="semName">Semmester 6</option>
+                          <option name="semName">Semmester 7</option>
+                          <option name="semName">Semmester 8</option>
+                        </select>
+                    </div>
+                    <span> </span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-box">
+                                <span class="details">Sub1</span>
+                                <input type="text" placeholder="" name="sub1Name">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Internal</span>
+                                <input type="number" placeholder="" name="sub1Int">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">External</span>
+                                <input type="number" placeholder="" name="sub1Ext">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Sub1cp</span>
+                                <input type="number" placeholder="" name="sub1Namecp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-box">
+                                <span class="details">Sub2</span>
+                                <input type="text" placeholder="" name="sub2Name">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Internal</span>
+                                <input type="number" placeholder="" name="sub2Int">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">External</span>
+                                <input type="number" placeholder="" name="sub2Ext">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Sub2cp</span>
+                                <input type="number" placeholder="" name="sub2Namecp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-box">
+                                <span class="details">Sub3</span>
+                                <input type="text" placeholder="" name="sub3Name">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Internal</span>
+                                <input type="number" placeholder="" name="sub3Int">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">External</span>
+                                <input type="number" placeholder="" name="sub3Ext">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Sub3cp</span>
+                                <input type="number" placeholder="" name="sub3Namecp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-box">
+                                <span class="details">Sub4</span>
+                                <input type="text" placeholder="" name="sub4Name">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Internal</span>
+                                <input type="number" placeholder="" name="sub4Int">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">External</span>
+                                <input type="number" placeholder="" name="sub4Ext">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Sub4cp</span>
+                                <input type="number" placeholder="" name="sub4Namecp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-box">
+                                <span class="details">Sub5</span>
+                                <input type="text" placeholder="" name="sub5Name">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Internal</span>
+                                <input type="number" placeholder="" name="sub5Int">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">External</span>
+                                <input type="number" placeholder="" name="sub5Ext">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Sub5cp</span>
+                                <input type="number" placeholder="" name="sub5Namecp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="input-box">
+                                <span class="details">Sub6</span>
+                                <input type="text" placeholder="" name="sub6Name">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Internal</span>
+                                <input type="number" placeholder="" name="sub6Int">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">External</span>
+                                <input type="number" placeholder="" name="sub6Ext">
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Sub6cp</span>
+                                <input type="number" placeholder="" name="sub6Namecp">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="title">Studentmarksheet-Practical</div>
+                    <div class="content">
+                        <div class="user-details">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="input-box">
+                                        <span class="details">Practical 1</span>
+                                        <input type="text" placeholder="" name="sub1Name">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Internal</span>
+                                        <input type="number" placeholder="" name="sub1Int">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">External</span>
+                                        <input type="number" placeholder="" name="sub1Ext">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Practical 1 cp</span>
+                                        <input type="number" placeholder="" name="sub1Namecp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="input-box">
+                                        <span class="details">Practical 2</span>
+                                        <input type="text" placeholder="" name="sub2Name">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Internal</span>
+                                        <input type="number" placeholder="" name="sub2Int">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">External</span>
+                                        <input type="number" placeholder="" name="sub2Ext">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Practical 2 cp</span>
+                                        <input type="number" placeholder="" name="sub2Namecp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="input-box">
+                                        <span class="details">Practical 3</span>
+                                        <input type="text" placeholder="" name="sub3Name">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Internal</span>
+                                        <input type="number" placeholder="" name="sub3Int">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">External</span>
+                                        <input type="number" placeholder="" name="sub3Ext">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Practical 3 cp</span>
+                                        <input type="number" placeholder="" name="sub3Namecp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="input-box">
+                                        <span class="details">Practical 4</span>
+                                        <input type="text" placeholder="" name="sub4Name">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Internal</span>
+                                        <input type="number" placeholder="" name="sub4Int">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">External</span>
+                                        <input type="number" placeholder="" name="sub4Ext">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Practical 4 cp</span>
+                                        <input type="number" placeholder="" name="sub4Namecp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="input-box">
+                                        <span class="details">Practical 5</span>
+                                        <input type="text" placeholder="" name="sub5Name">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Internal</span>
+                                        <input type="number" placeholder="" name="sub5Int">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">External</span>
+                                        <input type="number" placeholder="" name="sub5Ext">
+                                    </div>
+                                    <div class="input-box">
+                                        <span class="details">Practical 5 cp</span>
+                                        <input type="number" placeholder="" name="sub5Namecp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="title">Sessnal-Sub</div>
+                            <div class="content">
+                                <div class="user-details">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="input-box">
+                                                <span class="details">sSub1</span>
+                                                <input type="text" placeholder="" name="sub1Name">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Internal</span>
+                                                <input type="number" placeholder="" name="sub1Int">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">External</span>
+                                                <input type="number" placeholder="" name="sub1Ext">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">sSub1 cp</span>
+                                                <input type="number" placeholder="" name="sub1Namecp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="input-box">
+                                                <span class="details">sSub2</span>
+                                                <input type="text" placeholder="" name="sub2Name">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Internal</span>
+                                                <input type="number" placeholder="" name="sub2Int">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">External</span>
+                                                <input type="number" placeholder="" name="sub2Ext">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">sSub2 cp</span>
+                                                <input type="number" placeholder="" name="sub2Namecp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="input-box">
+                                                <span class="details">sSub3</span>
+                                                <input type="text" placeholder="" name="sub3Name">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">Internal</span>
+                                                <input type="number" placeholder="" name="sub3Int">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">External</span>
+                                                <input type="number" placeholder="" name="sub3Ext">
+                                            </div>
+                                            <div class="input-box">
+                                                <span class="details">sSub3 cp</span>
+                                                <input type="number" placeholder="" name="sub3Namecp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="button">
+                                    <input type="submit" value="Update">
+                                </div>
+            </form>
+            </div>
+            </div>
+            <%- include("partials/footer") %>

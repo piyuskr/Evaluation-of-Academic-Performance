@@ -1,0 +1,47 @@
+.jb {
+    background-color: #9fb4e5;
+}
+
+.jbw {
+    background-color: white;
+}
+
+.ct {
+    height: 100px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.cts {
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.cdteam {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    border-radius: 50px;
+    background: #9fb4e5;
+    box-shadow: 20px 20px 60px #8799c3, -20px -20px 60px #b7cfff;
+}
+
+.mb-3 {
+    color: black;
+}
+
+.guidDiscp {
+    height: 50%;
+    width: 60%px;
+    text-align: left;
+    margin-left: 130px;
+    margin-top: 60px;
+}
+
+.dis {
+    margin-left: 100px;
+    margin-top: 50px;
+    text-align: center;
+}

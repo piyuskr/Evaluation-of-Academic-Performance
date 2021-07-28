@@ -1,0 +1,21 @@
+<%- include("partials/header") -%>
+    <div style="display:flex; justify-content:center; align-items:center; margin-top: 150px;">
+        <div class="card" style="width:400px">
+            <div class="card-body">
+                <h4 class="card-title">Welcome back!</h4>
+                <h6 class="card-title">Login to continue</h6>
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <label>User Name </label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" name="email">
+                        <label>Password </label>
+                        <input type="password" class="form-control" id="exampleFormControlInput1" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/footer") -%>

@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+
+
+
+    <main id="site-main alluser">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <a href="/admin" class="border-shadow">
+                    <span class="text-gradient"><i class="fas fa-angle-double-left"></i>All Users</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div style="display:flex; justify-content:center; align-items:center; margin-top: 150px;">
+        <div class="card" style="width:400px">
+            <div class="card-body">
+                <h4 class="card-title">Update Users</h4>
+                <form action="/updateUser" method="POST">
+                    <div class="form-group">
+                        <label>User Id </label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="email">
+                        <label>Add Role </label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="isAdmin">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include("partials/footer") -%>

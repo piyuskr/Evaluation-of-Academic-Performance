@@ -1,0 +1,399 @@
+<%- include("partials/header") -%>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-4">
+                <div class="" style="width: 18rem;">
+                    <% suser.forEach(sdata =>{ %>
+                        <h5 class="card-title">
+                            <%= sdata.fullName%>
+                        </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Coll. Roll No :
+                            <%= sdata.rollNo%>
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Uni. Roll No :
+                            <%= sdata.uniNo%>
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Branch :
+                            <%= sdata.branch%>
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Batch :
+                            <%= sdata.batch%>
+                        </h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Degree :
+                            <%= sdata.degree%>
+                        </h6>
+                        <a href="<%= sdata.github%>" class="card-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="<%= sdata.linkedIn%>" class="card-link"><i class="fab fa-github-square"></i></a>
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <% for (var j=0; j<sdata.project.length ; j++){ %>
+            <h6 class="card-subtitle mb-2 text-muted">Project :
+                <ul>
+                    <li>
+                        <a href="<%=sdata.project[j].projectLink%>">
+                            <%= sdata.project[j].projectName%>
+                        </a>
+                    </li>
+                </ul>
+            </h6>
+            <% } %>
+                <% for (var j=0; j<sdata.achivement.length ; j++){ %>
+                    <h6 class="card-subtitle mb-2 text-muted">Achivement :
+                        <ul>
+                            <li><b><%= sdata.achivement[j].achName%></b> :
+                                <p>
+                                    <%= sdata.achivement[j].achdiscription%>
+                                </p>
+                            </li>
+                        </ul>
+                    </h6>
+                    <% } %>
+    </div>
+    <div class="container">
+        <% for (var k=0; k<sdata.sem.length ; k++){ %>
+            <h6 class="card-subtitle mb-2 text-muted"><b>Average Agrigates</b> :
+                <span>
+                            <% var x=+ 1; %>
+                            <%var y=((sdata.sem[k].sub1.sub1Int + sdata.sem[k].sub1.sub1Ext + sdata.sem[k].sub2.sub2Int + sdata.sem[k].sub2.sub2Ext + sdata.sem[k].sub3.sub3Int + sdata.sem[k].sub3.sub3Ext + sdata.sem[k].sub4.sub4Int + sdata.sem[k].sub4.sub4Ext + sdata.sem[k].sub5.sub5Int + sdata.sem[k].sub5.sub5Ext + sdata.sem[k].sub1p.sub1pInt + sdata.sem[k].sub1p.sub1pExt + sdata.sem[k].sub2p.sub2pInt + sdata.sem[k].sub2p.sub2pExt + sdata.sem[k].ssub1.ssub1Int + sdata.sem[k].ssub1.ssub1Ext + sdata.sem[k].ssub2.ssub2Int + sdata.sem[k].ssub2.ssub2Ext + sdata.sem[k].ssub3.ssub3Int + sdata.sem[k].ssub3.ssub3Ext)*100/800).toFixed(2)%>
+                        
+                            <%=(y/x).toFixed(2)%>
+                    </span>
+            </h6>
+            <% } %>
+    </div>
+    <center><i class="fas fa-grip-lines"></i></center>
+    <div>
+        <div>
+            <% for (var i=0; i<sdata.sem.length ; i++){ %>
+                <b> <center class="title" style="background: rgb(115, 214, 214);">
+                    <%= sdata.sem[i].semName %>
+                </center> </b>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Subject Name</th>
+                            <th>Internal (max-30)</th>
+                            <th>External (max-70)</th>
+                            <th>Total (max-100)</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub1.sub1Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub1.sub1Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub1.sub1Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub1.sub1Int + sdata.sem[i].sub1.sub1Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub1.sub1Int + sdata.sem[i].sub1.sub1Ext )>40){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub2.sub2Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub2.sub2Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub2.sub2Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub2.sub2Int + sdata.sem[i].sub2.sub2Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub2.sub2Int + sdata.sem[i].sub2.sub2Ext )>40){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub3.sub3Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub3.sub3Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub3.sub3Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub3.sub3Int + sdata.sem[i].sub3.sub3Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub3.sub3Int + sdata.sem[i].sub3.sub3Ext )>40){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub4.sub4Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub4.sub4Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub4.sub4Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub4.sub4Int + sdata.sem[i].sub4.sub4Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub4.sub4Int + sdata.sem[i].sub4.sub4Ext )>40){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub5.sub5Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub5.sub5Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub5.sub5Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub5.sub5Int + sdata.sem[i].sub5.sub5Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub5.sub5Int + sdata.sem[i].sub5.sub5Ext )>40){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Practical Name</th>
+                            <th>Internal (max-25)</th>
+                            <th>External (max-25)</th>
+                            <th>Total (max-50)</th>
+                            <th>Remark</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub1p.sub1pName%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub1p.sub1pInt%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub1p.sub1pExt%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub1p.sub1pInt + sdata.sem[i].sub1p.sub1pExt%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub1p.sub1pInt + sdata.sem[i].sub1p.sub1pExt )>20){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].sub2p.sub2pName%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub2p.sub2pInt%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub2p.sub2pExt%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].sub2p.sub2pInt + sdata.sem[i].sub2p.sub2pExt%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].sub2p.sub2pInt + sdata.sem[i].sub2p.sub2pExt )>20){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <th>Sessional Subject</th>
+                            <th>Internal (max-25)</th>
+                            <th>External (max-25)</th>
+                            <th>Total (max-50)</th>
+                            <th>Remark</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%= sdata.sem[i].ssub1.ssub1Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub1.ssub1Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub1.ssub1Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub1.ssub1Int + sdata.sem[i].ssub1.ssub1Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].ssub1.ssub1Int + sdata.sem[i].ssub1.ssub1Ext )>25){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <%= sdata.sem[i].ssub2.ssub2Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub2.ssub2Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub2.ssub2Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub2.sub2Int + sdata.sem[i].ssub2.ssub2Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].ssub2.ssub2Int + sdata.sem[i].ssub2.ssub2Ext )>50){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <%= sdata.sem[i].ssub3.ssub3Name%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub3.ssub3Int%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub3.ssub3Ext%>
+                            </td>
+                            <td>
+                                <%= sdata.sem[i].ssub3.ssub3Int + sdata.sem[i].ssub3.ssub3Ext%>
+                            </td>
+                            <td>
+                                <% if(( sdata.sem[i].ssub3.ssub3Int + sdata.sem[i].ssub3.ssub3Ext )>25){ %>
+                                    <%=rpass%>
+                                        <% }else{%>
+                                            <%=promote%>
+                                                <% } %>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Total</th>
+                            <th>Percentage</th>
+                            <th>CGPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <%= (sdata.sem[i].sub1.sub1Int + sdata.sem[i].sub1.sub1Ext + sdata.sem[i].sub2.sub2Int + sdata.sem[i].sub2.sub2Ext + sdata.sem[i].sub3.sub3Int + sdata.sem[i].sub3.sub3Ext + sdata.sem[i].sub4.sub4Int + sdata.sem[i].sub4.sub4Ext + sdata.sem[i].sub5.sub5Int + sdata.sem[i].sub5.sub5Ext + sdata.sem[i].sub1p.sub1pInt + sdata.sem[i].sub1p.sub1pExt + sdata.sem[i].sub2p.sub2pInt + sdata.sem[i].sub2p.sub2pExt + sdata.sem[i].ssub1.ssub1Int + sdata.sem[i].ssub1.ssub1Ext + sdata.sem[i].ssub2.ssub2Int + sdata.sem[i].ssub2.ssub2Ext + sdata.sem[i].ssub3.ssub3Int + sdata.sem[i].ssub3.ssub3Ext)%>
+                            </td>
+                            <td>
+                                <%= ((sdata.sem[i].sub1.sub1Int + sdata.sem[i].sub1.sub1Ext + sdata.sem[i].sub2.sub2Int + sdata.sem[i].sub2.sub2Ext + sdata.sem[i].sub3.sub3Int + sdata.sem[i].sub3.sub3Ext + sdata.sem[i].sub4.sub4Int + sdata.sem[i].sub4.sub4Ext + sdata.sem[i].sub5.sub5Int + sdata.sem[i].sub5.sub5Ext + sdata.sem[i].sub1p.sub1pInt + sdata.sem[i].sub1p.sub1pExt + sdata.sem[i].sub2p.sub2pInt + sdata.sem[i].sub2p.sub2pExt + sdata.sem[i].ssub1.ssub1Int + sdata.sem[i].ssub1.ssub1Ext + sdata.sem[i].ssub2.ssub2Int + sdata.sem[i].ssub2.ssub2Ext + sdata.sem[i].ssub3.ssub3Int + sdata.sem[i].ssub3.ssub3Ext)*100/800).toFixed(2)%>
+                            </td>
+                            <td>
+                                <%= (((sdata.sem[i].sub1.sub1Int + sdata.sem[i].sub1.sub1Ext + sdata.sem[i].sub2.sub2Int + sdata.sem[i].sub2.sub2Ext + sdata.sem[i].sub3.sub3Int + sdata.sem[i].sub3.sub3Ext + sdata.sem[i].sub4.sub4Int + sdata.sem[i].sub4.sub4Ext + sdata.sem[i].sub5.sub5Int + sdata.sem[i].sub5.sub5Ext + sdata.sem[i].sub1p.sub1pInt + sdata.sem[i].sub1p.sub1pExt + sdata.sem[i].sub2p.sub2pInt + sdata.sem[i].sub2p.sub2pExt + sdata.sem[i].ssub1.ssub1Int + sdata.sem[i].ssub1.ssub1Ext + sdata.sem[i].ssub2.ssub2Int + sdata.sem[i].ssub2.ssub2Ext + sdata.sem[i].ssub3.ssub3Int + sdata.sem[i].ssub3.ssub3Ext)*100/800)/9.5).toFixed(2) %>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <center><i class="fas fa-grip-lines"></i></center>
+                <% } %>
+                    <% }) %>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var data = {
+            <% var d=[],d1=[]; suser.forEach(sdata =>{ 
+                for (var i=0; i<sdata.sem.length ; i++){d[i]=sdata.sem[i].semName;
+                    d1[i]=((sdata.sem[i].sub1.sub1Int + sdata.sem[i].sub1.sub1Ext + sdata.sem[i].sub2.sub2Int + sdata.sem[i].sub2.sub2Ext + sdata.sem[i].sub3.sub3Int + sdata.sem[i].sub3.sub3Ext + sdata.sem[i].sub4.sub4Int + sdata.sem[i].sub4.sub4Ext + sdata.sem[i].sub5.sub5Int + sdata.sem[i].sub5.sub5Ext + sdata.sem[i].sub1p.sub1pInt + sdata.sem[i].sub1p.sub1pExt + sdata.sem[i].sub2p.sub2pInt + sdata.sem[i].sub2p.sub2pExt + sdata.sem[i].ssub1.ssub1Int + sdata.sem[i].ssub1.ssub1Ext + sdata.sem[i].ssub2.ssub2Int + sdata.sem[i].ssub2.ssub2Ext + sdata.sem[i].ssub3.ssub3Int + sdata.sem[i].ssub3.ssub3Ext2222 )*100/850);
+                }%>
+
+            labels: <%-JSON.stringify(d)%>,
+
+            datasets: [{
+                label: 'Academic performance in percentage',
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: <%-JSON.stringify(d1)%>,
+            }]
+            <%})%>
+        };
+        var config = {
+            type: 'bar',
+            data,
+            options: {}
+        };
+        // === include 'setup' then 'config' above ===
+        var myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+    </script>
+
+    <%- include("partials/footer") %>

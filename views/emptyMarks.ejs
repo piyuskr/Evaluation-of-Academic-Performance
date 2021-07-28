@@ -1,0 +1,39 @@
+<%- include("partials/header") -%>
+
+
+
+    <main id="site-main alluser">
+        <div class="container">
+            <div class="box-nav d-flex-justify-between">
+                <a href="/dashbord" class="border-shadow">
+                    <span class="text-gradient"><i class="fas fa-angle-double-left"></i>Dashbord</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+
+    <div style="display:flex; justify-content:center; align-items:center; margin-top: 150px;">
+        <div class="card" style="width:400px">
+            <div class="card-body">
+                <h4 class="card-title">Update Users</h4>
+                <form action="/emptyMarks" method="POST">
+                    <div class="form-group">
+                        <label>Student Roll.No</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="rollNo">
+                        <!-- <label>Semester Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="semName">
+                        <label>sub1 Name</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" name="sub1Name">
+                        <label>sub ext</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput1" name="sub1Ext"> -->
+                    </div>
+                    <button type="submit" class="btn btn-primary">Erase</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include("partials/footer") -%>

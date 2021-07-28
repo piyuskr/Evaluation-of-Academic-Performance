@@ -1,0 +1,44 @@
+<%- include("partials/header"); -%>
+    <div class="context">
+        <div class="text-align:center">
+            <h4>User Management System</h4>
+        </div>
+    </div>
+    <form action="/admin" method="post">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>@Email</th>
+                    <th>Admin Status</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(data =>{ %>
+
+                    <tr>
+                        <td>
+                            <%= data.firstName + " " + data.lastName %>
+                        </td>
+                        <td>
+                            <%= data.email %>
+                        </td>
+                        <td>
+                            <%= data.isAdmin %>
+                        </td>
+                        <td>
+                            <a href="updateUser" class="btn border-shadow update">
+                                <span><i class="fas fa-pencil-alt"></i></span>
+                            </a>
+                        </td>
+
+                    </tr>
+                    <% }) %>
+
+            </tbody>
+        </table>
+    </form>
+
+
+    <%- include("partials/footer"); -%>
